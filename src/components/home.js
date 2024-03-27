@@ -4,8 +4,14 @@ import Homeproduct from "./home_product";
 import { FaEye, FaHeart } from "react-icons/fa";
 import { BiLogoFacebook, BiLogoTwitter, BiLogoInstagram, BiLogoYoutube } from "react-icons/bi";
 import { FaCartShopping } from "react-icons/fa6";
+import T1 from "../images/T1.avif";
+import Banner1 from "../images/Multi-Banner-1.avif";
+import Banner2 from "../images/Multi-Banner-2.avif";
+import Banner3 from "../images/Multi-Banner-3.webp";
+import Banner4 from "../images/Multi-Banner-4.avif";
+import Banner5 from "../images/Multi-Banner-5.webp";
 import "./home.css";
-const Home = ({addtocart}) => {
+const Home = ({ addtocart }) => {
   // Product Category
   const [newProduct, setNewProduct] = useState([]);
   const [featuredProduct, setFeaturedProduct] = useState([]);
@@ -26,7 +32,7 @@ const Home = ({addtocart}) => {
   // product type
   useEffect(() => {
     productcategory();
-  })
+  }, [])
   const productcategory = () => {
     // New Product
     const newCategory = Homeproduct.filter((x) => {
@@ -70,7 +76,7 @@ const Home = ({addtocart}) => {
                             {
                                 trendingProduct.map((curEle) => {
                                     return (
-                                        <div className="box">
+                                        <div key={curEle.id} className="box">
                                             <div className="img-box">
                                                 <img src={curEle.img} alt="" />
                                                 <div className="icon">
@@ -84,7 +90,7 @@ const Home = ({addtocart}) => {
                                             </div>
                                             <div className="info">
                                                 <h3>{curEle.name}</h3>
-                                                <p>{curEle.price}</p>
+                                                <p>EGP{curEle.price}</p>
                                                 <button className="btn" onClick={() => addtocart(curEle)}>Add to cart</button>
                                             </div>
                                         </div>
@@ -103,7 +109,7 @@ const Home = ({addtocart}) => {
                             </div>
                             <div className="detail">
                                 <div className="img-box">
-                                    <img src="images/T1.avif" alt="testmonial" />
+                                    <img src={T1} alt="testmonial" />
                                 </div>
                                 <div className="info">
                                     <h3>stephan robot</h3>
@@ -144,19 +150,19 @@ const Home = ({addtocart}) => {
             <div className="container">
                 <div className="left-box">
                     <div className="box">
-                        <img src="images/Multi-Banner-1.avif" alt="banner" />
+                        <img src={Banner1} alt="banner" />
                     </div>
                     <div className="box">
-                        <img src="images/Multi-Banner-2.avif" alt="banner" />
+                        <img src={Banner2} alt="banner" />
                     </div>
                 </div>
                 <div className="right-box">
                     <div className="top">
-                        <img src="images/Multi-Banner-3.webp" alt="" />
-                        <img src="images/Multi-Banner-4.avif" alt="" />
+                        <img src={Banner3} alt="" />
+                        <img src={Banner4}  alt="" />
                     </div>
                     <div className="bottom">
-                        <img src="images/Multi-Banner-5.webp" alt="" />
+                        <img src={Banner5}  alt="" />
                     </div>
                 </div>
             </div>
@@ -170,7 +176,7 @@ const Home = ({addtocart}) => {
                     {
                         newProduct.map((curEle) => {
                             return (
-                                <div>
+                                <div key={curEle.id}>
                                     <div className="productbox">
                                         <div className="img-box">
                                             <img src={curEle.img} alt="" />
@@ -197,14 +203,14 @@ const Home = ({addtocart}) => {
                     {
                         featuredProduct.map((curEle) => {
                             return (
-                                <div>
+                                <div key={curEle.id}>
                                     <div className="productbox">
                                         <div className="img-box">
                                             <img src={curEle.img} alt="" />
                                         </div>
                                         <div className="detail">
                                             <h3>{curEle.name}</h3>
-                                            <p>{curEle.price}</p>
+                                            <p>EGP{curEle.price}</p>
                                             <div className="icon">
                                                 <button><FaEye /></button>
                                                 <button><FaHeart /></button>
@@ -224,14 +230,14 @@ const Home = ({addtocart}) => {
                     {
                         topProduct.map((curEle) => {
                             return (
-                                <div>
+                                <div key={curEle.id}>
                                     <div className="productbox">
                                         <div className="img-box">
                                             <img src={curEle.img} alt="" />
                                         </div>
                                         <div className="detail">
                                             <h3>{curEle.name}</h3>
-                                            <p>{curEle.price}</p>
+                                            <p>EGP{curEle.price}</p>
                                             <div className="icon">
                                                 <button><FaEye /></button>
                                                 <button><FaHeart /></button>

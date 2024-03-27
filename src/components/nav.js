@@ -1,26 +1,18 @@
 import React from 'react';
-import { MdLocalShipping } from "react-icons/md";
 import { FaSearch } from "react-icons/fa";
 import { FiLogIn } from "react-icons/fi";
 import { useAuth0 } from "@auth0/auth0-react";
 import { CiLogout } from "react-icons/ci";
 import { Link } from "react-router-dom";
-import './nav.css';
+import logo from "../images/logo.webp";
+import "./nav.css";
 const Nav = ({search, setSearch, searchproduct}) => {
   const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
   return (
     <div className="header">
         <div className="top-header">
-            <div className="icon">
-                <MdLocalShipping />
-            </div>
-            <div className="info">
-                <p>Free Shipping When Shopping upto $1000</p>
-            </div>
-        </div>
-        <div className="mid-header">
           <div className="logo">
-            <img src="images/logo.webp" alt="logo" />
+            <img src={logo} alt="logo" />
           </div>
           <div className="search-box">
             <input type="text" value={search} placeholder="search" onChange={(e) => setSearch(e.target.value)} />

@@ -49,7 +49,7 @@ const App = () => {
       alert("Added to cart");
     }
   }
-  console.log(cart);
+  //console.log(cart);
   return (
     <div>
       <BrowserRouter>

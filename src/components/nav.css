@@ -8,31 +8,16 @@
     width: 100%;
 }
 .header .top-header {
-    max-width: 100%;
-    display: flex;
-    padding: 20px 20px;
-    background-color: #f6f7f9;
-}
-.header .top-header .icon {
-    margin-left: 20px;
-    color: #ababab;
-    font-size: 19px;
-}
-.header .top-header .info p {
-    margin-left: 10px;
-    color: #8a8a8a;
-}
-.header .mid-header {
     display: flex;
     padding: 20px 40px;
     max-width: 100%;
     justify-content: space-between;
 }
-.header .mid-header .logo img {
+.header .top-header .logo img {
     cursor: pointer;
     object-fit: cover;
 }
-.header .mid-header .search-box input {
+.header .top-header .search-box input {
     width: 250px;
     padding: 10px 10px;
     background: #f6f7f8;
@@ -42,7 +27,7 @@
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
-.header .mid-header .search-box button {
+.header .top-header .search-box button {
     padding: 10px 10px;
     outline: none;
     border: none;
@@ -57,18 +42,18 @@
     transition: 0.5s;
     font-weight: 600;
 }
-.header .mid-header .search-box button:hover {
+.header .top-header .search-box button:hover {
     background: #fed700;
     color: #cd1e76;
 }
-.header .mid-header .user {
+.header .top-header .user {
     display: flex;
     margin-right: 30px;
 }
-.header .mid-header .user .icon {
+.header .top-header .user .icon {
     margin-right: 10px;
 }
-.header .mid-header .user .btn button {
+.header .top-header .user .btn button {
     outline: none;
     border: none;
     font-size: 16px;

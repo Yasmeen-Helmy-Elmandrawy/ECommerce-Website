@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./shop.css";
 import { AiFillHeart, AiFillEye, AiOutlineClose} from "react-icons/ai";
+import shopLeft from "../images/shop-left.avif";
+import shopTop from "../images/shop-top.webp";
 const Shop = ({shop, Filter, allcatefilter, addtocart}) => {
   // Toggle Product Detail
   const [showDetail, setShowDetail] = useState(false);
@@ -66,14 +68,14 @@ const Shop = ({shop, Filter, allcatefilter, addtocart}) => {
                     </div>
                     <div className="banner">
                         <div className="img-box">
-                            <img src="images/shop-left.avif" alt="" />
+                            <img src={shopLeft} alt="" />
                         </div>
                     </div>
                 </div>
                 <div className="right-box">
                     <div className="banner">
                         <div className="img-box">
-                            <img src="images/shop-top.webp" alt="" />
+                            <img src={shopTop} alt="" />
                         </div>
                     </div>
                     <div className="product-box">

@@ -10,7 +10,8 @@
 .home .top-banner {
     max-width: 100%;
     height: 300px;
-    background: url('http://localhost:3000/images/bg.avif');
+    /* background: url('http://localhost:3000/images/bg.avif'); */
+    background: url("../images/bg.avif");
     background-size: contain;
     background-repeat: no-repeat;
     padding: 50px 60px;
